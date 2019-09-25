@@ -26,13 +26,7 @@ A 2D top-down RPG game, with a tile-based world. Built with Godot, based on earl
 
 The skill’s level will tell you which tool you can use and which item “tier” you can “use”.
 
-When cutting trees, mining ores or fishing the “spot”/”item” has a specific amount of resources available.
-
-When killing monsters, monsters will have a set of items which can have a random chance of dropping.
-
-When cooking, there will always be a chance of food getting burned *(perhaps)*.
-
-When smithing, there can be a chance of failing doing said craft.
+When cutting trees, mining ores the ”item” drops a random amount of items *(from a minimum drop and a maximum drop)*. The amount of XP you get is determined based on how many items dropped.
 
 <br />
 
