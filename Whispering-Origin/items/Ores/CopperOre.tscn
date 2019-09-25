@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://items/Ores/Ore.gd" type="Script" id=1]
+[ext_resource path="res://tilesets/ores.png" type="Texture" id=2]
+[ext_resource path="res://audio/pickaxe.ogg" type="AudioStream" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16, 12 )
+
+[node name="CopperOre" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 16, 32 )
+
+[node name="OreSprite" type="Sprite" parent="TextureRect"]
+texture = ExtResource( 2 )
+centered = false
+hframes = 2
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 16, 20 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

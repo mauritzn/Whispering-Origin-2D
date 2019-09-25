@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://images/house7.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Montserrat/Montserrat-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://fonts/Montserrat/Montserrat-Medium.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 38
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = ExtResource( 4 )
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = true
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 654.913, 496 )
+scale = Vector2( 2.40777, 2.40777 )
+texture = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 100
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 457.0
+margin_top = 279.0
+margin_right = 822.0
+margin_bottom = 440.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 25
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_right = 365.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.470588 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "Whispering Origin"
+align = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_left = 107.0
+margin_top = 72.0
+margin_right = 257.0
+margin_bottom = 161.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 15
+
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+margin_right = 150.0
+margin_bottom = 37.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 2 )
+text = "Start Game"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+margin_top = 52.0
+margin_right = 150.0
+margin_bottom = 89.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 3 )
+text = "Quit"
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
