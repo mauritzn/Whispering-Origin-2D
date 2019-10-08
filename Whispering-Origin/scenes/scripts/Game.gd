@@ -1,7 +1,7 @@
 extends Node2D
 
-const Inventory = preload("res://Inventory.tscn")
-const Skills = preload("res://Skills.tscn")
+const Inventory = preload("res://ui/Inventory.tscn")
+const Skills = preload("res://ui/Skills.tscn")
 
 func _ready():
 	var inventory_instance = Inventory.instance()

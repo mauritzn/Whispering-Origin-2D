@@ -16,12 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Whispering Origin"
-run/main_scene="res://MainMenu.tscn"
+run/main_scene="res://scenes/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-PlayerData="*res://PlayerData.gd"
+ItemDB="*res://autoloads/ItemDB.gd"
+PlayerData="*res://autoloads/PlayerData.gd"
 
 [display]
 

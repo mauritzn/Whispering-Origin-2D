@@ -1,7 +1,5 @@
 extends Node
 
-const ItemDB = preload("ItemDB.gd")
-
 var skills = {
 	"_max_level": 20,
 	"mining": {
@@ -13,6 +11,17 @@ var skills = {
 		"_name": "Woodcutting",
 		"level": 1,
 		"xp": 0
+	}
+}
+
+var tools = {
+	"axe": {
+		"name": "Bronze Axe",
+		"hit_force": (100 / 3) + 1
+	},
+	"pickaxe": {
+		"name": "Bronze Pickaxe",
+		"hit_force": (100 / 3) + 1
 	}
 }
 

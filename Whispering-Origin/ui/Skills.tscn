@@ -1,10 +1,10 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://Skills.gd" type="Script" id=1]
+[ext_resource path="res://ui/scripts/Skills.gd" type="Script" id=1]
 [ext_resource path="res://images/pickaxe_icon.png" type="Texture" id=2]
 [ext_resource path="res://fonts/Montserrat/Montserrat-Bold.tres" type="DynamicFont" id=3]
 [ext_resource path="res://fonts/Montserrat/Montserrat-Medium.tres" type="DynamicFont" id=4]
-[ext_resource path="res://ProgressBar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ui/ProgressBar.tscn" type="PackedScene" id=5]
 [ext_resource path="res://images/axe_icon.png" type="Texture" id=6]
 [ext_resource path="res://fonts/Montserrat/Montserrat-Bold.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://audio/level_up/ecofuture3.ogg" type="AudioStream" id=8]
@@ -16,11 +16,11 @@ bg_color = Color( 0.266667, 0.266667, 0.266667, 1 )
 size = 32
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=20]
+[sub_resource type="DynamicFont" id=3]
 size = 28
 font_data = ExtResource( 7 )
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=4]
 resource_name = "LevelUp-default-in"
 length = 0.2
 tracks/0/type = "value"
@@ -48,7 +48,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 resource_name = "LevelUp-default-out"
 length = 0.2
 tracks/0/type = "value"
@@ -76,7 +76,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 tracks/0/type = "value"
 tracks/0/path = NodePath("LevelUp:rect_scale")
 tracks/0/interp = 2
@@ -102,7 +102,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("LevelUp:rect_scale")
 tracks/0/interp = 2
@@ -128,7 +128,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=8]
 resource_name = "RequiredLevel-default-in"
 length = 0.2
 tracks/0/type = "value"
@@ -156,7 +156,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=9]
 resource_name = "RequiredLevel-default-out"
 length = 0.2
 tracks/0/type = "value"
@@ -184,7 +184,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=10]
 resource_name = "RequiredLevel-in"
 tracks/0/type = "value"
 tracks/0/path = NodePath("RequiredLevel:rect_scale")
@@ -211,7 +211,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=11]
 resource_name = "RequiredLevel-out"
 tracks/0/type = "value"
 tracks/0/path = NodePath("RequiredLevel:rect_scale")
@@ -355,7 +355,7 @@ margin_bottom = 157.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_pivot_offset = Vector2( 640, 23 )
-custom_fonts/font = SubResource( 20 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 0.588235 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
@@ -364,16 +364,16 @@ align = 1
 valign = 1
 
 [node name="LevelUpAnimations" type="AnimationPlayer" parent="CanvasLayer"]
-anims/LevelUp-default-in = SubResource( 19 )
-anims/LevelUp-default-out = SubResource( 4 )
-anims/LevelUp-in = SubResource( 5 )
-anims/LevelUp-out = SubResource( 6 )
+anims/LevelUp-default-in = SubResource( 4 )
+anims/LevelUp-default-out = SubResource( 5 )
+anims/LevelUp-in = SubResource( 6 )
+anims/LevelUp-out = SubResource( 7 )
 
 [node name="RequiredLevelAnimations" type="AnimationPlayer" parent="CanvasLayer"]
-anims/RequiredLevel-default-in = SubResource( 15 )
-anims/RequiredLevel-default-out = SubResource( 16 )
-anims/RequiredLevel-in = SubResource( 17 )
-anims/RequiredLevel-out = SubResource( 18 )
+anims/RequiredLevel-default-in = SubResource( 8 )
+anims/RequiredLevel-default-out = SubResource( 9 )
+anims/RequiredLevel-in = SubResource( 10 )
+anims/RequiredLevel-out = SubResource( 11 )
 
 [node name="LevelUpTimer" type="Timer" parent="CanvasLayer"]
 wait_time = 3.0

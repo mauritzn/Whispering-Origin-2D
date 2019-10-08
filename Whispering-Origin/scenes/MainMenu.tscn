@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://scenes/scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://images/house7.png" type="Texture" id=2]
 [ext_resource path="res://fonts/Montserrat/Montserrat-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://fonts/Montserrat/Montserrat-Medium.ttf" type="DynamicFontData" id=4]

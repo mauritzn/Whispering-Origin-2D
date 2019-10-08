@@ -1,3 +1,5 @@
+extends Node
+
 const _ITEM_DB = {
 	"ore": {
 		"_icons": preload("res://images/ores.png"),

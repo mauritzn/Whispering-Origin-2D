@@ -1,8 +1,7 @@
 extends Control
 
 onready var grid = $CanvasLayer/Panel/MarginContainer/GridContainer
-const ItemDB = preload("ItemDB.gd")
-const Slot = preload("res://InventorySlot.tscn")
+const Slot = preload("res://ui/InventorySlot.tscn")
 
 var inventory_size = PlayerData.inventory._rows * PlayerData.inventory._cols
 var holding_item_key = null
