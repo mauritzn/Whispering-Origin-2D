@@ -1,5 +1,5 @@
 # Whispering-Origin-2D
-A 2D top-down RPG game, with a tile-based world. Built with Godot, based on earlier C++ version
+A 2D top-down RPG game, with a tile-based world. Built with Godot, based on the earlier [C++ version](https://github.com/mauritzn/Whispering-Origin).
 
 **HTML5 Demo:** https://games.mauritzonline.com/game/Whispering-Origin-html5/
 
